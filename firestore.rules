@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /messages/{id} {
+      allow read: if true;
+      // 작성만 허용 (수정/삭제 불가), 1~300자, 서버 시간만 허용
+      allow create: if request.resource.data.keys().hasOnly(['text', 'userId', 'createdAt'])
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 300
+        && request.resource.data.userId is string
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
+  }
+}
