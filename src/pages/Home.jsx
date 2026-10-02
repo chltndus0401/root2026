@@ -93,7 +93,7 @@ export default function Home() {
 
       <FadeIn className="home-block">
         <h2 className="home-block__title home-block__title--kr">오시는 길</h2>
-        <p className="home-block__text">
+        <p className="home-block__text selectable">
           [{ADDRESS.zip}] {ADDRESS.road} <br className="br-mobile" />
           {ADDRESS.detail}
         </p>
