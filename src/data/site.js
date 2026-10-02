@@ -32,11 +32,15 @@ export const INTRO = {
   ],
 };
 
-// 카카오톡 초대장 문구 (변경 시 졸준위장 확인)
+// 카카오톡 초대장 문구
 export const KAKAO_SHARE = {
+  profileText: "YOU'RE INVITED TO ···",
   title: '덕성여자대학교 디지털소프트웨어공학부 제1회 졸업전시회: ROOT',
   description: '11월 12일(목) - 11월 13일(금)',
+  buttonTitle: 'Exhibition Website',
   imagePath: '/og-poster.jpg',
+  imageWidth: 800,
+  imageHeight: 1131,
 };
 
 // 온라인 도록: 구글 드라이브 PDF의 파일 ID

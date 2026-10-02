@@ -21,16 +21,23 @@ export function shareInvitation() {
     return;
   }
 
+  const link = { mobileWebUrl: origin, webUrl: origin };
+
   Kakao.Share.sendDefault({
     objectType: 'feed',
     content: {
       title: KAKAO_SHARE.title,
       description: KAKAO_SHARE.description,
       imageUrl: origin + KAKAO_SHARE.imagePath,
-      link: { mobileWebUrl: origin, webUrl: origin },
+      imageWidth: KAKAO_SHARE.imageWidth,
+      imageHeight: KAKAO_SHARE.imageHeight,
+      link,
     },
-    buttons: [
-      { title: '전시 보러가기', link: { mobileWebUrl: origin, webUrl: origin } },
-    ],
+    // 카드 상단 "YOU'RE INVITED TO ···" 줄
+    itemContent: {
+      profileText: KAKAO_SHARE.profileText,
+    },
+    // 하단 버튼 (클릭 시 content.link 로 이동)
+    buttonTitle: KAKAO_SHARE.buttonTitle,
   });
 }
