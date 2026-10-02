@@ -1,7 +1,7 @@
 // 전시 기본 정보 — 문구 수정은 이 파일에서
 export const SITE = {
   title: '덕성여자대학교 디지털소프트웨어공학부',
-  exhibition: '제 1회 졸업전시회: ROOT',
+  exhibition: '제1회 졸업전시회: ROOT',
   venueShort: '서울창업허브 창동 B1F',
   period: '2026. 11. 12. - 2026. 11. 13.',
   // D-DAY 기준 (KST)

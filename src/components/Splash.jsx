@@ -38,7 +38,7 @@ export default function Splash({ onDone }) {
           2026
           <br />덕성여자대학교
           <br />디지털소프트웨어공학부
-          <br />제 1회 졸업전시회
+          <br />제1회 졸업전시회
         </p>
         <span className="splash__enter">Click to Enter!</span>
       </div>
