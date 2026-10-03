@@ -63,7 +63,7 @@ export default function ProjectDetail() {
       />
 
       <div className="accordions">
-        <Accordion title="기획 의도" defaultOpen>
+        <Accordion title="기획 의도">
           <p className="pre">{p.intent}</p>
         </Accordion>
 

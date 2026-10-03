@@ -2,7 +2,8 @@
    ROOT 2026 — 덕성여대 디지털소프트웨어공학부 졸업전시
    ========================================================= */
 :root {
-  --green: #233b21;
+  --green: #264024;
+  --green-hover: #516650;
   --green-mid: #3e553b;
   --cream: #edeae3;
   --placeholder: #d9d9d9;
@@ -134,30 +135,23 @@ textarea,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 14px 0 24px;
   background: var(--green) url('./assets/bg-roots.webp') center 40% / cover no-repeat;
   color: var(--cream);
 }
 .gnb__logo img { height: 22px; width: auto; }
-.gnb__nav { display: flex; gap: 22px; }
+.gnb__nav { display: flex; gap: 6px; }
 .gnb__nav a {
+  padding: 6px 10px;
+  border-radius: 6px;
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.01em;
-  position: relative;
+  transition: background-color 0.25s ease;
 }
-.gnb__nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(0);
-  transition: transform 0.3s var(--ease);
-}
-.gnb__nav a:hover::after { transform: scaleX(1); }
+/* hover 시 #264024 → #516650 */
+.gnb__nav a:hover,
+.gnb__nav a:focus-visible { background-color: var(--green-hover); }
 
 .gnb__menu { display: none; font-size: 22px; font-weight: 300; }
 
@@ -190,7 +184,16 @@ textarea,
   padding-bottom: var(--header-h);
 }
 .menu-overlay__list a,
-.menu-overlay__list button { font-size: 26px; font-weight: 300; letter-spacing: 0.02em; }
+.menu-overlay__list button {
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease;
+}
+.menu-overlay__list a:hover,
+.menu-overlay__list button:hover { background-color: var(--green-hover); }
 .menu-overlay__list a.active { font-weight: 500; }
 .menu-overlay__list button { margin-top: 20px; opacity: 0.75; }
 
