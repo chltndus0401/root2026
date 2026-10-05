@@ -80,6 +80,7 @@ textarea,
 .custom-cursor.is-hover span { transform: scale(1.8); }
 
 /* ---------- splash ---------- */
+/* 접속 즉시 그대로 노출, 사라질 때만 페이드아웃 */
 .splash {
   position: fixed;
   inset: 0;
@@ -89,10 +90,13 @@ textarea,
   background: var(--green) url('./assets/bg-roots.webp') center / cover no-repeat;
   color: var(--cream);
   text-align: center;
-  transition: opacity 0.6s ease;
-  animation: splashIn 0.8s ease both;
 }
-.splash.is-leaving { opacity: 0; pointer-events: none; }
+/* 사라질 때: 0.8초 (Splash.jsx 의 FADE_OUT 과 맞추기) */
+.splash.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease-in-out;
+}
 .splash__logo { width: clamp(230px, 30vw, 420px); margin: 0 auto 72px; }
 .splash__text { font-size: clamp(18px, 1.4vw, 22px); font-weight: 500; line-height: 1.6; }
 .splash__enter {
@@ -104,7 +108,6 @@ textarea,
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
-@keyframes splashIn { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 768px) {
   .splash { background-image: url('./assets/bg-roots-tall.webp'); }
   .splash__logo { width: 66vw; margin-bottom: 15vw; }

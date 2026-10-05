@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import logo from '../assets/logo-root-light.webp';
 
-const DURATION = 3000;
-const FADE = 600;
+const DURATION = 3000; // 자동 전환까지 대기 시간(ms)
+const FADE_OUT = 800;  // 사라지는 시간(ms) — styles.css 의 .splash.is-leaving 과 맞추기
 
 export default function Splash({ onDone }) {
   const [leaving, setLeaving] = useState(false);
@@ -14,7 +14,7 @@ export default function Splash({ onDone }) {
     done.current = true;
     clearTimeout(timer.current); // 클릭으로 조기 진입 시 타이머 해제
     setLeaving(true);
-    setTimeout(onDone, FADE);
+    setTimeout(onDone, FADE_OUT); // 페이드아웃이 끝난 뒤 Unmount
   };
 
   useEffect(() => {
