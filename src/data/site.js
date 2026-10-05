@@ -36,7 +36,7 @@ export const INTRO = {
 export const KAKAO_SHARE = {
   profileText: "YOU'RE INVITED TO ···",
   title: '덕성여자대학교 디지털소프트웨어공학부 제1회 졸업전시회: ROOT',
-  description: '11월 12일(목) - 11월 13일(금)',
+  description: '11월 12일(목) - 11월 13일(금) | 서울창업허브 창동 B1F',
   buttonTitle: 'Exhibition Website',
   imagePath: '/og-poster.jpg',
   imageWidth: 800,
