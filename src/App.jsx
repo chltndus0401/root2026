@@ -11,13 +11,31 @@ import Messages from './pages/Messages';
 import Book from './pages/Book';
 import ThanksTo from './pages/ThanksTo';
 
+const SPLASH_KEY = 'root2026:splashSeen';
+
 export default function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  // 탭을 닫기 전까지는 한 번만 스플래시 노출 (새로고침해도 다시 안 나옴)
+  const [showSplash, setShowSplash] = useState(() => {
+    try {
+      return !sessionStorage.getItem(SPLASH_KEY);
+    } catch {
+      return true;
+    }
+  });
+
+  const handleSplashDone = () => {
+    try {
+      sessionStorage.setItem(SPLASH_KEY, '1');
+    } catch {
+      // 저장이 막힌 브라우저에서는 무시
+    }
+    setShowSplash(false);
+  };
 
   return (
     <>
       <CustomCursor />
-      {showSplash && <Splash onDone={() => setShowSplash(false)} />}
+      {showSplash && <Splash onDone={handleSplashDone} />}
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
