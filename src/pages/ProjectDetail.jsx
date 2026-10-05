@@ -32,7 +32,7 @@ export default function ProjectDetail() {
   const back = () => (window.history.length > 1 ? navigate(-1) : navigate('/projects'));
 
   return (
-    <div className="container container--detail">
+    <div className="container container--detail" key={p.id}>
       <button className="back-link" onClick={back}>
         ⇠ 이전 페이지
       </button>
