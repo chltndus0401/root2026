@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { PROFESSORS } from '../data/people';
 
 export default function Professors() {
