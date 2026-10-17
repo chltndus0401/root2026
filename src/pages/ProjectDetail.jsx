@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 import Slider from '../components/Slider';
 import { ORDERED_PROJECTS as PROJECTS } from '../data/order';
 
@@ -21,6 +21,7 @@ function Accordion({ title, defaultOpen = false, children }) {
 export default function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { state } = useLocation();
   const index = PROJECTS.findIndex((p) => p.id === id);
   if (index === -1) return <Navigate to="/projects" replace />;
 
@@ -29,7 +30,11 @@ export default function ProjectDetail() {
   const next = PROJECTS[(index + 1) % PROJECTS.length];
   const images = p.images?.length ? p.images : [null];
 
-  const back = () => (window.history.length > 1 ? navigate(-1) : navigate('/projects'));
+  // 이전 페이지: 다른 팀으로 옮겨 다녀도 항상 PROJECTS 목록으로 나감
+  // - 목록에서 들어왔으면 history 를 한 칸 뒤로 (목록 스크롤 위치 유지)
+  // - 이전/다음 팀 이동은 replace 로 history 를 쌓지 않음
+  // - 링크로 바로 들어온 경우엔 /projects 로 이동
+  const back = () => (state?.fromList ? navigate(-1) : navigate('/projects'));
 
   return (
     <div className="container container--detail" key={p.id}>
@@ -116,8 +121,8 @@ export default function ProjectDetail() {
       </div>
 
       <nav className="detail-nav" aria-label="다른 프로젝트">
-        <Link to={`/project/${prev.id}`}>⇠ {prev.team}</Link>
-        <Link to={`/project/${next.id}`}>{next.team} ⇢</Link>
+        <Link to={`/project/${prev.id}`} replace state={state}>⇠ {prev.team}</Link>
+        <Link to={`/project/${next.id}`} replace state={state}>{next.team} ⇢</Link>
       </nav>
     </div>
   );
