@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import FadeIn from '../components/FadeIn';
-import { PROJECTS } from '../data/projects';
+import { ORDERED_PROJECTS as PROJECTS } from '../data/order';
 
 export default function Projects() {
   return (
