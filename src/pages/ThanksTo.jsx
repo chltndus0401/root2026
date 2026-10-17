@@ -2,8 +2,8 @@ import { useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import FadeIn from '../components/FadeIn';
 import { COMMITTEE, DEVELOPERS, PROFESSORS } from '../data/people';
+import { SPONSORS } from '../data/site';
 import rootLogo from '../assets/logo-root-green.webp';
-import duksung from '../assets/logo-duksung.webp';
 
 export default function ThanksTo() {
   const [active, setActive] = useState(null);
@@ -67,7 +67,9 @@ export default function ThanksTo() {
           <h2>SPONSORS</h2>
           <p className="thanks-sec__sub">후원사</p>
           <div className="sponsors">
-            <img src={duksung} alt="덕성여자대학교" />
+            {SPONSORS.map((s) => (
+              <img key={s.name} src={s.logo} alt={s.name} style={{ height: s.height }} />
+            ))}
           </div>
         </FadeIn>
       </div>
