@@ -50,7 +50,7 @@ export const KAKAO_SHARE = {
 
 // 온라인 도록: 구글 드라이브 PDF의 파일 ID
 // (https://drive.google.com/file/d/<여기>/view) — 공유 설정 '링크가 있는 모든 사용자'
-export const BOOK_DRIVE_FILE_ID = 'https://drive.google.com/file/d/1H4n68t6mGfdpKfPO18r9C_wrg-Cs2LdS/view?usp=sharing';
+export const BOOK_DRIVE_FILE_ID = 'https://drive.google.com/file/d/1H4n68t6mGfdpKfPO18r9C_wrg-Cs2LdS/view';
 
 // 부스배치도 이미지: src/assets 에 넣고 import 해서 넣어주세요 (없으면 null)
 export const BOOTH_MAP_IMAGE = boothMap;
