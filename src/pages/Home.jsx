@@ -8,9 +8,11 @@ import kakaoMapIcon from '../assets/icon-kakao-map.webp';
 import talkIcon from '../assets/icon-kakaotalk.webp';
 import poster from '../assets/poster.webp';
 import venue01 from '../assets/venue-01.webp';
+import venue02 from '../assets/venue-02.webp';
+import venue03 from '../assets/venue-03.webp';
 
-// 전시장 안내 사진 — 추가 사진은 import 후 배열에 넣기
-const VENUE_PHOTOS = [venue01];
+// 전시장 안내 사진 — 추가 사진은 import 후 배열에 넣기 (배열 순서 = 슬라이드 순서)
+const VENUE_PHOTOS = [venue01, venue02, venue03];
 
 function useCountdown(target) {
   const calc = () => {
