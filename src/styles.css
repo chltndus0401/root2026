@@ -98,22 +98,20 @@ textarea,
   transition: opacity 0.8s ease-in-out;
 }
 .splash__inner { padding: 0 24px; }
-.splash__logo { width: clamp(180px, 22vw, 320px); margin: 0 auto 56px; }
-.splash__text { font-size: clamp(18px, 1.4vw, 22px); font-weight: 500; line-height: 1.6; }
+/* 피그마 SplashView 기준: 데스크탑·모바일 동일 크기 */
+.splash__logo { width: 260px; margin: 0 auto 62px; }
+.splash__text { font-size: 20px; font-weight: 500; line-height: 1.5; }
 .splash__enter {
   display: inline-block;
-  margin-top: 28px;
+  margin-top: 24px;
   font-family: var(--font-en);
-  font-size: clamp(18px, 1.4vw, 22px);
+  font-size: 19px;
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
 }
 @media (max-width: 768px) {
   .splash { background-image: url('./assets/bg-roots-tall.webp'); }
-  .splash__logo { width: 48vw; max-width: 240px; margin-bottom: 40px; }
-  .splash__text, .splash__enter { font-size: 18px; }
-  .splash__enter { margin-top: 24px; }
 }
 
 /* ---------- layout ---------- */
@@ -322,22 +320,22 @@ textarea,
 .kakao-share img { width: 52px; height: 52px; border-radius: 50%; transition: transform 0.25s var(--ease); }
 .kakao-share:hover img { transform: scale(1.06); }
 
+/* 모바일(360w) — 피그마 HOME 360w 기준. 여기 없는 값은 데스크탑과 동일 */
 @media (max-width: 768px) {
-  .container--home { padding-top: 48px; }
-  .home-hero__title { font-size: 26px; }
-  .home-hero__meta { font-size: 22px; }
-  .home-intro__slogan { font-size: 15px; }
-  .home-intro p { font-size: 15px; }
-  .home-block__title { font-size: 26px; }
-  .home-block__text { font-size: 15px; }
-  .dday__num { font-size: 32px; }
-  .dday__label { font-size: 13px; }
-  .map-link { height: 36px; font-size: 14px; }
-  .map-link img { width: 26px; height: 26px; }
-  .venue-slider { aspect-ratio: 3 / 4; }
-  .poster { width: 100%; max-width: 420px; }
-  .kakao-share { font-size: 15px; margin-top: 56px; }
-  .kakao-share img { width: 64px; height: 64px; }
+  .container--home { padding: 44px 64px 96px; }
+  .home-hero__title { font-size: 21px; line-height: 1.4; }
+  .home-hero__meta { margin-top: 14px; font-size: 19px; line-height: 1.5; }
+  .home-intro { margin-top: 31px; }
+  .home-intro__slogan { margin-bottom: 30px; }
+  .home-intro p { line-height: 1.9; }
+  .home-block { margin-top: 40px; }
+  .home-block__title { font-size: 20px; margin-bottom: 18px; }
+  .home-block__text { font-size: 12px; }
+  .dday { padding: 18px 0 60px; }
+  /* 오시는 길 사진: 모바일도 데스크탑과 같은 4:3 */
+  .venue-slider { margin-bottom: 58px; } /* 아래 POSTER 와의 간격 (블록 간격 40px 과 겹쳐서 58px) */
+  .poster { width: 100%; }
+  .kakao-share { margin-top: 66px; font-size: 13px; }
 }
 
 /* ---------- slider ---------- */
