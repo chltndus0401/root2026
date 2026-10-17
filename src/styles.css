@@ -573,7 +573,8 @@ textarea,
   color: #fff;
   transition: opacity 0.2s;
 }
-.messages__form button:disabled { opacity: 0.6; cursor: default; }
+/* 입력 전에도 디자인과 같은 진한 초록 유지 (흐려지지 않게) */
+.messages__form button:disabled { cursor: default; }
 
 @media (max-width: 768px) {
   .messages__list { padding: 20px 24px 28px; }
