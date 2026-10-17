@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../assets/logo-root-light.webp';
 
@@ -17,13 +17,19 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const { pathname } = useLocation();
 
+  const closeTimer = useRef(null);
+
+  // 열기/닫기 애니메이션은 CSS keyframes(menuDown/menuUp)로 처리
+  // (기존 rAF + transition 방식은 모바일 브라우저에서 첫 프레임이 건너뛰어져 애니메이션이 안 보였음)
   const openMenu = () => {
+    clearTimeout(closeTimer.current);
     setMounted(true);
-    requestAnimationFrame(() => requestAnimationFrame(() => setOpen(true)));
+    setOpen(true);
   };
   const closeMenu = () => {
     setOpen(false);
-    setTimeout(() => setMounted(false), MENU_MS);
+    clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setMounted(false), MENU_MS);
   };
 
   // 페이지 이동 시 메뉴 닫기
@@ -58,12 +64,7 @@ export default function Header() {
       </header>
 
       {mounted && (
-        <div className={`menu-overlay ${open ? 'is-open' : ''}`} role="dialog" aria-modal="true">
-          <div className="menu-overlay__top">
-            <Link to="/" className="gnb__logo" onClick={closeMenu}>
-              <img src={logo} alt="ROOT" />
-            </Link>
-          </div>
+        <div className={`menu-overlay ${open ? 'is-open' : 'is-closing'}`} role="dialog" aria-modal="true">
           <nav className="menu-overlay__list">
             <NavLink to="/" end onClick={closeMenu}>HOME</NavLink>
             {NAV.map((n) => (
