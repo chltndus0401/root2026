@@ -1,4 +1,4 @@
-// 전시 기본 정보 — 문구 수정은 이 파일에서
+import boothMap from '../assets/booth-map.webp';
 export const SITE = {
   title: '덕성여자대학교 디지털소프트웨어공학부',
   exhibition: '제1회 졸업전시회: ROOT',
