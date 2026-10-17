@@ -10,7 +10,7 @@ export default function Projects() {
       <FadeIn as="ul" className="project-grid">
         {PROJECTS.map((p) => (
           <li key={p.id}>
-            <Link to={`/project/${p.id}`} className="project-card">
+            <Link to={`/project/${p.id}`} state={{ fromList: true }} className="project-card">
               <div className="project-card__thumb">
                 {p.thumbnail && <img src={p.thumbnail} alt="" loading="lazy" />}
               </div>
