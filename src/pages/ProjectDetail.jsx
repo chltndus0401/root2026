@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import Slider from '../components/Slider';
-import { PROJECTS } from '../data/projects';
+import { ORDERED_PROJECTS as PROJECTS } from '../data/order';
 
 function Accordion({ title, defaultOpen = false, children }) {
   const [open, setOpen] = useState(defaultOpen);
