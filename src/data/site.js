@@ -45,7 +45,7 @@ export const KAKAO_SHARE = {
   buttonTitle: 'Exhibition Website',
   imagePath: '/og-poster.jpg',
   imageWidth: 800,
-  imageHeight: 1131,
+  imageHeight: 1132,
 };
 
 // 온라인 도록: 구글 드라이브 PDF의 파일 ID
