@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import logo from '../assets/logo-root-light.webp';
 
-const DURATION = 3000; // 자동 전환까지 대기 시간(ms)
+const DURATION = 10000; // 자동 전환까지 대기 시간(ms)
 const FADE_OUT = 800;  // 사라지는 시간(ms) — styles.css 의 .splash.is-leaving 과 맞추기
 
 export default function Splash({ onDone }) {
