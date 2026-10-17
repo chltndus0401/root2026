@@ -1,4 +1,9 @@
 import boothMap from '../assets/booth-map.webp';
+import sponsorDuksung from '../assets/sponsor-duksung.webp';
+import sponsorHub from '../assets/sponsor-seoul-startup-hub.webp';
+import sponsorIlhwa from '../assets/sponsor-ilhwa.webp';
+import sponsorColorEnergy from '../assets/sponsor-color-energy.webp';
+
 export const SITE = {
   title: '덕성여자대학교 디지털소프트웨어공학부',
   exhibition: '제1회 졸업전시회: ROOT',
@@ -49,3 +54,13 @@ export const BOOK_DRIVE_FILE_ID = '';
 
 // 부스배치도 이미지: src/assets 에 넣고 import 해서 넣어주세요 (없으면 null)
 export const BOOTH_MAP_IMAGE = boothMap;
+
+
+// 후원사 로고 (배열 순서 = 화면 순서). height 는 화면에 보이는 높이(px)
+// 로고를 바꿀 때는 src/assets 의 파일만 같은 이름으로 덮어쓰면 됩니다.
+export const SPONSORS = [
+  { name: '덕성여자대학교', logo: sponsorDuksung, height: 26 },
+  { name: '서울창업허브 창동', logo: sponsorHub, height: 26 },
+  { name: '일화', logo: sponsorIlhwa, height: 26 },
+  { name: '컬러에너지', logo: sponsorColorEnergy, height: 58 },
+];
