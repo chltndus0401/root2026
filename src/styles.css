@@ -574,10 +574,10 @@ textarea,
 
 /* ---------- THANKS-TO ---------- */
 /* 피그마 THANKS-TO 기준 — 데스크탑·모바일 글자 크기 동일. 본문은 가운데 258px 칸 */
-.container--thanks { max-width: 548px; padding-top: 46px; }
+.container--thanks { max-width: 364px; padding-top: 46px; }
 .container--thanks .page-title h1 { font-size: 20px; }
 .thanks-logo { width: 220px; margin: 74px auto 64px; }
-.thanks-body { max-width: 440px; margin: 0 auto; color: var(--green); }
+.thanks-body { max-width: 258px; margin: 0 auto; color: var(--green); }
 .thanks-sec + .thanks-sec { margin-top: 40px; }
 .thanks-sec h2 { font-size: 18px; font-weight: 600; line-height: 1.2; }
 .thanks-sec__sub { margin-top: 4px; font-size: 14px; }
@@ -613,7 +613,6 @@ textarea,
 @media (max-width: 768px) {
   .page-title { padding: 0 8px; } /* (기존 그대로) 다른 페이지 모바일 제목 여백 */
   .container--thanks { max-width: none; padding-top: 43px; }
-  .thanks-body { max-width: 258px; }
   .container--thanks .page-title { padding: 0 36px; }
   .thanks-logo { margin: 42px auto 37px; }
 }
