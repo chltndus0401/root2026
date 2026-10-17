@@ -47,5 +47,5 @@ export const KAKAO_SHARE = {
 // (https://drive.google.com/file/d/<여기>/view) — 공유 설정 '링크가 있는 모든 사용자'
 export const BOOK_DRIVE_FILE_ID = '';
 
-// 부스 배치표 이미지: src/assets 에 넣고 import 해서 넣어주세요 (없으면 null)
-export const BOOTH_MAP_IMAGE = null;
+// 부스배치도 이미지: src/assets 에 넣고 import 해서 넣어주세요 (없으면 null)
+export const BOOTH_MAP_IMAGE = boothMap;
