@@ -2027,7 +2027,7 @@ export const PROJECTS = [
   {
     "id": "t06-02",
     "division": "06",
-    "subtitle": "Live English, Everywhere!",
+    "subtitle": "Live English, Everywhere! 일상 속 모든 순간, 실시간 맥락 기반 영어회화 AI 튜터와 함께하다!",
     "name": "LIVENG(라이빙)",
     "team": "네박자",
     "thumbnail": "/projects/t06-02/1.webp",
