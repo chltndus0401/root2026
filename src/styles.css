@@ -471,12 +471,29 @@ textarea,
 
 /* ---------- MAPS / BOOK ---------- */
 .container--wide { padding-top: 48px; }
-.booth-map { margin-top: 28px; max-width: 1000px; }
+
+/* MAPS: PC 중앙 정렬 */
+.container--maps .page-title { text-align: center; }
+.booth-map { margin: 28px auto 0; max-width: 1000px; }
+.booth-map img { width: 100%; height: auto; object-fit: contain; }
+@media (max-width: 768px) {
+  .container--maps .page-title { text-align: left; }
+  .booth-map img { max-height: 75vh; }
+}
+
+/* BOOK: PC는 1380 x 731.7, 모바일은 9:16 */
 .book-viewer {
-  margin-top: 28px;
-  width: min(100%, 480px);
-  aspect-ratio: 9 / 16;
+  margin: 28px auto 0;
+  width: min(100%, 1380px);
+  aspect-ratio: 1380 / 731.7;
   background: #f1f1f1;
+}
+@media (max-width: 768px) {
+  .book-viewer {
+    margin-left: 0;
+    width: min(100%, 480px);
+    aspect-ratio: 9 / 16;
+  }
 }
 .book-viewer iframe { width: 100%; height: 100%; border: 0; }
 
