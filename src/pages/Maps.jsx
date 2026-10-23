@@ -4,7 +4,7 @@ import { BOOTH_MAP_IMAGE } from '../data/site';
 
 export default function Maps() {
   return (
-    <div className="container container--maps container--fill">
+    <div className="container container--wide container--fill container--maps">
       <PageTitle sub="부스배치도" />
       {BOOTH_MAP_IMAGE && (
         <FadeIn as="div" className="booth-map">
