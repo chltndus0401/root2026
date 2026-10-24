@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 import Slider from '../components/Slider';
+import FitImage from '../components/FitImage';
 import { ORDERED_PROJECTS as PROJECTS } from '../data/order';
 
 function Accordion({ title, defaultOpen = false, children }) {
@@ -63,7 +64,7 @@ export default function ProjectDetail() {
         items={images}
         label={`${p.name} 소개 이미지`}
         render={(src, i) =>
-          src ? <img src={src} alt={`${p.name} 이미지 ${i + 1}`} loading={i ? 'lazy' : 'eager'} /> : <div className="placeholder" />
+          src ? <FitImage src={src} boxRatio={16 / 9} alt={`${p.name} 이미지 ${i + 1}`} loading={i ? 'lazy' : 'eager'} /> : <div className="placeholder" />
         }
       />
 
