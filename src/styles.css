@@ -382,7 +382,7 @@ textarea,
 }
 .project-card { display: block; }
 .project-card__thumb {
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   background: var(--placeholder);
   overflow: hidden;
 }
