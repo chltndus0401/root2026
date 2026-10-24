@@ -13,7 +13,7 @@ export default function Projects() {
           <li key={p.id}>
             <Link to={`/project/${p.id}`} state={{ fromList: true }} className="project-card">
               <div className="project-card__thumb">
-                {p.thumbnail && <FitImage src={p.thumbnail} boxRatio={3 / 2} tolerance={0.22} alt="" loading="lazy" />}
+                {p.thumbnail && <FitImage src={p.thumbnail} boxRatio={16 / 9} alt="" loading="lazy" />}
               </div>
               <p className="project-card__sub">{p.subtitle}</p>
               <h3 className="project-card__name">{p.name}</h3>
