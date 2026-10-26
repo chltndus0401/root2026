@@ -478,6 +478,7 @@ textarea,
 /* MAPS: PC는 700px 칸을 가운데 두고 제목·배치도 모두 칸 왼쪽에 맞춤 (피그마 1440w 기준) */
 .container--maps { max-width: 764px; } /* 700 + 좌우 여백 32 x 2 */
 @media (min-width: 769px) {
+  .container--maps { padding-bottom: 50px; } /* 배치도 아래 ~ 푸터 50px */
   .container--maps .page-title h2 { margin-top: 12px; font-size: 19px; } /* 피그마 MAPS 소제목 */
 }
 .booth-map { margin: 0 auto; max-width: 700px; } /* 이미지 자체 여백 포함 700px → 안쪽 배치도는 600px (피그마와 동일) */
@@ -490,7 +491,7 @@ textarea,
 /* BOOK: PC는 1380 x 731.7, 모바일은 9:16
    PC: 1440px 칸 + 좌우 여백 30px → 뷰어 왼쪽 끝이 제목 왼쪽 끝과 항상 같은 위치 (피그마 1440w 기준) */
 @media (min-width: 769px) {
-  .container--book { max-width: 1440px; padding-left: 30px; padding-right: 30px; }
+  .container--book { max-width: 1440px; padding-left: 30px; padding-right: 30px; padding-bottom: 30px; } /* 뷰어 아래 ~ 푸터 30px */
 }
 .book-viewer {
   margin: 18px 0 0;
