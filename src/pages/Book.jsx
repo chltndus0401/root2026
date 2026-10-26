@@ -3,7 +3,7 @@ import { BOOK_DRIVE_FILE_ID } from '../data/site';
 
 export default function Book() {
   return (
-    <div className="container container--wide container--fill">
+    <div className="container container--wide container--fill container--book">
       <PageTitle sub="온라인 도록 공개" note="* 로드 오류 발생 시 새로고침 권장" />
       {BOOK_DRIVE_FILE_ID && (
         <div className="book-viewer">
