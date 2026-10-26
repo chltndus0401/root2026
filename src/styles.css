@@ -475,25 +475,32 @@ textarea,
 /* ---------- MAPS / BOOK ---------- */
 .container--wide { padding-top: 48px; }
 
-/* MAPS: PC 중앙 정렬 */
-.container--maps .page-title { text-align: center; }
-.booth-map { margin: 28px auto 0; max-width: 1000px; }
+/* MAPS: PC는 700px 칸을 가운데 두고 제목·배치도 모두 칸 왼쪽에 맞춤 (피그마 1440w 기준) */
+.container--maps { max-width: 764px; } /* 700 + 좌우 여백 32 x 2 */
+@media (min-width: 769px) {
+  .container--maps .page-title h2 { margin-top: 12px; font-size: 19px; } /* 피그마 MAPS 소제목 */
+}
+.booth-map { margin: 0 auto; max-width: 700px; } /* 이미지 자체 여백 포함 700px → 안쪽 배치도는 600px (피그마와 동일) */
 .booth-map img { width: 100%; height: auto; object-fit: contain; }
 @media (max-width: 768px) {
-  .container--maps .page-title { text-align: left; }
+  .booth-map { margin-top: 28px; }
   .booth-map img { max-height: 75vh; }
 }
 
-/* BOOK: PC는 1380 x 731.7, 모바일은 9:16 */
+/* BOOK: PC는 1380 x 731.7, 모바일은 9:16
+   PC: 1440px 칸 + 좌우 여백 30px → 뷰어 왼쪽 끝이 제목 왼쪽 끝과 항상 같은 위치 (피그마 1440w 기준) */
+@media (min-width: 769px) {
+  .container--book { max-width: 1440px; padding-left: 30px; padding-right: 30px; }
+}
 .book-viewer {
-  margin: 28px auto 0;
+  margin: 18px 0 0;
   width: min(100%, 1380px);
   aspect-ratio: 1380 / 731.7;
   background: #f1f1f1;
 }
 @media (max-width: 768px) {
   .book-viewer {
-    margin-left: 0;
+    margin-top: 28px;
     width: min(100%, 480px);
     aspect-ratio: 9 / 16;
   }
