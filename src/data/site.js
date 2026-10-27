@@ -56,11 +56,12 @@ export const BOOK_DRIVE_FILE_ID = '1067qOEpv24aKBPPaKS4-TOQ4_FQ2n1pt';
 export const BOOTH_MAP_IMAGE = boothMap;
 
 
-// 후원사 로고 (배열 순서 = 화면 순서). height 는 화면에 보이는 높이(px)
+// 협찬사 로고 (배열 순서 = 화면 순서). height 는 화면에 보이는 높이(px)
 // 로고를 바꿀 때는 src/assets 의 파일만 같은 이름으로 덮어쓰면 됩니다.
+// slug 가 있으면 로고를 눌렀을 때 /sponsors/<slug> 상세 페이지로 이동 (내용은 data/sponsors.js)
 export const SPONSORS = [
   { name: '덕성여자대학교', logo: sponsorDuksung, height: 26 },
   { name: '서울창업허브 창동', logo: sponsorHub, height: 26 },
-  { name: '일화', logo: sponsorIlhwa, height: 26 },
-  { name: '컬러에너지', logo: sponsorColorEnergy, height: 58 },
+  { name: '일화', logo: sponsorIlhwa, height: 26, slug: 'tingle' },
+  { name: '컬러에너지', logo: sponsorColorEnergy, height: 58, slug: 'colorenergy' },
 ];

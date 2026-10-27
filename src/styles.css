@@ -508,6 +508,50 @@ textarea,
 }
 .book-viewer iframe { display: block; width: 100%; height: 100%; border: 0; }
 
+/* ---------- SPONSORS 상세 (일화 팅글 / 컬러에너지) ---------- */
+/* 피그마 SPONSORS - Tingle / Colorenergy 기준. PC: 가운데 700px 칸, 모바일: 좌우 65px */
+.container--sponsor { max-width: 764px; padding-top: 43px; padding-bottom: 85px; }
+.container--sponsor .back-link { font-size: 13.5px; }
+.sponsor-head { margin-top: 14px; }
+.sponsor-head__title { font-size: 22px; font-weight: 600; line-height: 1.4; color: var(--green); }
+.sponsor-head__sub { margin-top: 4px; font-size: 18px; line-height: 1.4; color: var(--green); }
+.sponsor-links { display: flex; flex-wrap: wrap; gap: 4px 5px; margin-top: 19px; }
+.sponsor-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #333;
+  transition: filter 0.2s;
+}
+.sponsor-link img { width: 20px; height: 20px; flex-shrink: 0; }
+.sponsor-link--instagram { background: #ffa7cb; }
+.sponsor-link--store { background: #7edd91; padding: 0 9px 0 11px; gap: 5px; }
+.sponsor-link:hover { filter: brightness(0.95); }
+.sponsor-product { margin-top: 42px; color: #335031; }
+.sponsor-product__name { font-size: 20px; font-weight: 600; line-height: 1.4; }
+.sponsor-product__note { font-size: 12px; }
+.sponsor-product__img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin-top: 17px; background: var(--placeholder); }
+.sponsor-points { margin-top: 19px; font-size: 12.5px; font-weight: 500; line-height: 24.5px; }
+.sponsor-points li { position: relative; padding-left: 14px; }
+.sponsor-points li::before { content: '✦'; position: absolute; left: 0; }
+.sponsor-points strong { font-weight: 700; }
+@media (max-width: 768px) {
+  .container--sponsor { padding: 28px 65px 44px; }
+  .sponsor-head { margin-top: 13px; }
+  .sponsor-head__title { font-size: 20px; }
+  .sponsor-head__sub { margin-top: 6px; font-size: 16px; }
+  .sponsor-links { margin-top: 22px; }
+  .sponsor-product { margin-top: 29px; }
+  .sponsor-product__name { font-size: 18px; }
+  .sponsor-product__img { margin-top: 22px; }
+  .sponsor-points { margin-top: 17px; }
+}
+
 /* ---------- MESSAGES ---------- */
 .messages {
   flex: 1;
@@ -636,6 +680,11 @@ textarea,
 /* 후원사 로고: 2개씩 2줄 (덕성여대·서울창업허브 / 일화·컬러에너지) */
 .sponsors { margin-top: 18px; display: grid; grid-template-columns: repeat(2, auto); justify-content: center; justify-items: center; align-items: center; gap: 20px 24px; }
 .sponsors img { width: auto; max-width: 100%; }
+.sponsors > * { display: block; }
+/* 일화·컬러에너지 로고: 누르면 협찬 상세 페이지로 (다른 버튼처럼 커서 커짐 + 살짝 확대) */
+.sponsor-logo-link img { transition: transform 0.3s var(--ease); }
+.sponsor-logo-link:hover img { transform: scale(1.06); }
+.sponsor-logo-link:active img { transform: scale(0.97); }
 
 /* 모바일: 제목은 왼쪽 60px, 본문 칸은 가운데 그대로 */
 @media (max-width: 768px) {

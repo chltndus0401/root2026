@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import FadeIn from '../components/FadeIn';
 import { COMMITTEE, DEVELOPERS, PROFESSORS } from '../data/people';
@@ -65,11 +66,18 @@ export default function ThanksTo() {
 
         <FadeIn className="thanks-sec">
           <h2>SPONSORS</h2>
-          <p className="thanks-sec__sub">후원사</p>
+          <p className="thanks-sec__sub">협찬사</p>
           <div className="sponsors">
-            {SPONSORS.map((s) => (
-              <img key={s.name} src={s.logo} alt={s.name} style={{ height: s.height }} />
-            ))}
+            {SPONSORS.map((s) => {
+              const logo = <img src={s.logo} alt={s.name} style={{ height: s.height }} />;
+              return s.slug ? (
+                <Link key={s.name} to={`/sponsors/${s.slug}`} state={{ fromThanks: true }} className="sponsor-logo-link" aria-label={`${s.name} 협찬 상세 보기`}>
+                  {logo}
+                </Link>
+              ) : (
+                <span key={s.name}>{logo}</span>
+              );
+            })}
           </div>
         </FadeIn>
       </div>

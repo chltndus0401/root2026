@@ -10,6 +10,7 @@ import Maps from './pages/Maps';
 import Messages from './pages/Messages';
 import Book from './pages/Book';
 import ThanksTo from './pages/ThanksTo';
+import SponsorDetail from './pages/SponsorDetail';
 
 const SPLASH_KEY = 'root2026:splashSeen';
 
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/books" element={<Navigate to="/book" replace />} />
           <Route path="/thanksto" element={<ThanksTo />} />
+          <Route path="/sponsors/:slug" element={<SponsorDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
