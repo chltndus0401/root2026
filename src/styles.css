@@ -677,10 +677,11 @@ textarea,
 .committee div + div { margin-top: 5px; }
 .committee dt { font-weight: 700; flex-shrink: 0; }
 .committee dd { max-width: 108px; }
-/* 후원사 로고: 2개씩 2줄 (덕성여대·서울창업허브 / 일화·컬러에너지) */
-.sponsors { margin-top: 18px; display: grid; grid-template-columns: repeat(2, auto); justify-content: center; justify-items: center; align-items: center; gap: 20px 24px; }
+/* 협찬사 로고: 한 줄에 하나씩 세로로, 가운데 정렬. 48px 간격으로 줄 시작 (피그마 THANKS-TO 기준) */
+.sponsors { margin-top: 18px; display: flex; flex-direction: column; align-items: center; }
 .sponsors img { width: auto; max-width: 100%; }
-.sponsors > * { display: block; }
+.sponsors > * { display: block; height: 48px; }
+.sponsors > :last-child { height: auto; }
 /* 일화·컬러에너지 로고: 누르면 협찬 상세 페이지로 (다른 버튼처럼 커서 커짐 + 살짝 확대) */
 .sponsor-logo-link img { transition: transform 0.3s var(--ease); }
 .sponsor-logo-link:hover img { transform: scale(1.06); }

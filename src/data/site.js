@@ -60,8 +60,8 @@ export const BOOTH_MAP_IMAGE = boothMap;
 // 로고를 바꿀 때는 src/assets 의 파일만 같은 이름으로 덮어쓰면 됩니다.
 // slug 가 있으면 로고를 눌렀을 때 /sponsors/<slug> 상세 페이지로 이동 (내용은 data/sponsors.js)
 export const SPONSORS = [
-  { name: '덕성여자대학교', logo: sponsorDuksung, height: 26 },
-  { name: '서울창업허브 창동', logo: sponsorHub, height: 26 },
-  { name: '일화', logo: sponsorIlhwa, height: 26, slug: 'tingle' },
-  { name: '컬러에너지', logo: sponsorColorEnergy, height: 58, slug: 'colorenergy' },
+  { name: '덕성여자대학교', logo: sponsorDuksung, height: 27 },
+  { name: '서울창업허브 창동', logo: sponsorHub, height: 31 },
+  { name: '일화', logo: sponsorIlhwa, height: 31.5, slug: 'tingle' },
+  { name: '컬러에너지', logo: sponsorColorEnergy, height: 40, slug: 'colorenergy' },
 ];
