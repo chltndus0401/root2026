@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageTitle from '../components/PageTitle';
 import FadeIn from '../components/FadeIn';
+import SourceNotice from '../components/SourceNotice';
 import { COMMITTEE, DEVELOPERS, PROFESSORS } from '../data/people';
 import { SPONSORS } from '../data/site';
 import rootLogo from '../assets/logo-root-green.webp';
@@ -62,6 +63,7 @@ export default function ThanksTo() {
               </div>
             ))}
           </dl>
+          <SourceNotice className="source-notice--thanks" />
         </FadeIn>
 
         <FadeIn className="thanks-sec">
