@@ -1,4 +1,5 @@
 import { SITE } from '../data/site';
+import SourceNotice from './SourceNotice';
 
 export default function Footer() {
   return (
@@ -9,6 +10,7 @@ export default function Footer() {
         {SITE.period} {SITE.venueShort}
       </p>
       <p>Copyright ⓒ {SITE.title} All rights reserved.</p>
+      <SourceNotice />
     </footer>
   );
 }
