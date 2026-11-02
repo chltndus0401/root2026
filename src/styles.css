@@ -214,6 +214,18 @@ textarea,
 @media (max-width: 768px) {
   .footer { padding: 40px 24px 48px; font-size: 13px; }
 }
+.source-notice { line-height: 1.75; }
+.source-notice a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.2s;
+}
+.source-notice a:hover { opacity: 0.7; }
+.source-notice strong { font-weight: 700; }
+
+
+.footer .source-notice { margin-top: 12px; font-size: inherit; }
 
 /* ---------- scroll to top ---------- */
 .to-top {
@@ -677,6 +689,12 @@ textarea,
 .committee div + div { margin-top: 5px; }
 .committee dt { font-weight: 700; flex-shrink: 0; }
 .committee dd { max-width: 108px; }
+.source-notice--thanks {
+  margin-top: 28px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--green-mid);
+}
 /* 협찬사 로고: 한 줄에 하나씩 세로로, 가운데 정렬. 48px 간격으로 줄 시작 (피그마 THANKS-TO 기준) */
 .sponsors { margin-top: 18px; display: flex; flex-direction: column; align-items: center; }
 .sponsors img { width: auto; max-width: 100%; }
